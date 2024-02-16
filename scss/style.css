@@ -185,49 +185,37 @@ input:checked ~ .menu-hamburguer-elements {
 }
 .capa {
   width: 100vw;
-  height: 18.75rem;
+  height: 14.5rem;
   background-image: url(../img/foto-capa.png);
   background-repeat: no-repeat;
   background-size: 600px;
 }
 
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0.3rem;
-  grid-row-gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
-  height: 37rem;
-  margin-top: 0.8rem;
-  border: double 2px #000;
-  margin-bottom: 0.2rem;
-  text-align: center;
 }
 
-.intodution {
-  grid-area: 1/1/6/2;
-  background: red;
+.card {
+  width: 100%;
+  height: 5rem;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  margin-top: 2px;
 }
 
-.quem-sou {
-  grid-area: 1/2/3/3;
-  background: brown;
+.material-symbols-outlined {
+  color: #fff;
+  font-size: 2.6rem;
+  padding: 0.5rem;
 }
 
-.o-que-pesnso {
-  grid-area: 1/3/3/4;
-  background: blue;
-}
-
-.o-que-proponho {
-  grid-area: 3/2/5/3;
-  background: rebeccapurple;
-}
-
-.o-que-fiz {
-  grid-area: 3/3/5/4;
-  background: violet;
+.card a {
+  color: #fff;
+  font-size: 1.4rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -235,7 +223,46 @@ input:checked ~ .menu-hamburguer-elements {
     background-size: cover;
     height: 35rem;
   }
+  .cards {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 1%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0.7rem;
+    grid-row-gap: 1rem;
+  }
+  .quem-sou {
+    grid-area: 1/1/3/2;
+    border: 0.4rem solid #112F76;
+  }
+  .o-que-penso {
+    grid-area: 1/2/3/3;
+    border: 0.4rem solid #112F76;
+  }
+  .o-que-proponho {
+    grid-area: 3/1/5/2;
+    border: 0.4rem solid #112F76;
+  }
+  .o-que-fiz {
+    grid-area: 3/2/5/3;
+    border: 0.4rem solid #112F76;
+  }
+  .card {
+    height: 10rem;
+  }
+  .card .material-symbols-outlined {
+    font-size: 5rem;
+  }
+  .card a {
+    font-size: 2.2rem;
+  }
 }
 body {
   background-color: #ccc;
+}
+
+body {
+  overflow-x: hidden;
 }/*# sourceMappingURL=style.css.map */
