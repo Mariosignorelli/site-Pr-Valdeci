@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sobre .menu-hamburger{
+    position: absolute;
+    left: 0px;
+    background: $fundo-verde;
+    color: $white-normal;
+    width: 100%;
+    }
+.menu-hamburger h1{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    .menu-hamburger h1{
+        display: block;
+       position: absolute;
+       top:1.875rem;
+       left:9.375rem;
+       font-size: 2rem;
+    }
+}
